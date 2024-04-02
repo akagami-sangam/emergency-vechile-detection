@@ -27,20 +27,24 @@ body.loading:before {
   z-index: 100;
 }
 
-video {
+video, canvas {
   position: fixed;
   top: 0;
-  left: 40%;
-  width: 400px; /* Adjust the width as per your requirement */
-  height: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60vw; /* Adjust based on viewport width */
+  height: 60vh; /* Adjust based on viewport height */
 }
-canvas {
-  display: inline !important;
-  position: fixed;
-  top: 15px;
-  left: 40%;
-  width: 400px; /* Adjust the width as per your requirement */
-  height: 400px; /* Adjust the height as per your requirement */
+
+/* Improve visibility of loading indicator */
+body.loading:before {
+  text-shadow: 0 0 8px #000;
+}
+
+/* Enhanced traffic light visibility */
+#detection-indicator {
+  border: 2px solid #fff; /* Add a white border */
+  box-shadow: 0 0 10px #fff; /* Add a subtle glow effect */
 }
 
 #fps {
